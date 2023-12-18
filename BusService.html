@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Online Bus Service</title>
+</head>
+<style>
+*{
+  padding: 0%;
+  margin: 0%;
+}
+
+.login{
+  width: 80%;
+  height: 400px;
+  font-size: 26px;
+  display: none;
+  margin: auto;
+  border: solid black 2px; 
+  border-radius: 20px ;
+  margin-top: 10px;
+  background-color: white;
+  padding-top: 30px;
+  padding-left: 25px;
+  justify-content: space-evenly;
+  color: orange;
+  transition: 2s ease-out;
+  box-shadow: 1px 1px 10px black;
+  
+}
+.l2897{
+  width: 90%;
+  font-size: 30px;
+  align-items: center;
+  filter: drop-shadow(1px 1px 5px black);
+  margin-top: 20px;
+}
+.l28971{
+  width: 90%;
+  background-color: red;
+  color: navy;
+  font-size: 30px;
+  margin-top: 40px;
+  border-radius: 5px;
+  filter: drop-shadow(1px 1px 5px black);
+}
+.hr2467{
+  width: 90%;
+}
+  .Upper {
+    background-color:#4169E1;
+    width:100%;
+    height :110px;
+    text-align: left;
+    padding: 3px;
+    border: solid black 3px;
+  }
+  .heades{
+    font-size: 40px;
+    padding-right: 20px;
+  }
+  .heads {
+    padding-top: 10px;
+    filter: drop-shadow(1px 1px 2px black);
+  }
+  .headess{
+    display: flex;
+    justify-content: space-between;
+  }
+  .Topics {
+    display: flex;
+    color: black;
+    justify-content: space-around;
+  }
+  .spot{
+    color: white;
+  }
+  .Topics  a{
+    text-decoration: none;
+    color: black;
+    font-weight: 700px;
+    margin-top: 15%;
+  }
+ .Topics h2{
+    margin: 39px;
+  }
+ 
+  .searching {
+    width: 90%;
+    height: 200px;
+    border: black solid 2px ;
+    margin: 20px auto;
+    border-radius: 1px;
+    box-shadow: 1px 1px 10px black;
+    background-color: white;
+    filter: drop-shadow(10px);
+    border-radius: 10px;
+  }
+  .searching button {
+    width: 98%;
+    color: white;
+    font-size: 30px;
+    background-color: #1434A4;
+    align-items:center;
+    margin-top: 30px;
+    margin-left: 4px;
+    border-radius: 10px;
+  }
+  .searching input{
+    width: 90%;
+    font-size: 30px;
+    justify-content: center;
+    border: hidden;
+    margin: 8px 5px;
+    
+  }
+  .searching hr{
+    width: 90%;
+    margin-left: 20px;
+    font-weight: 900px;
+  }
+  .searchingpnr {
+    width: 90%;
+    height: 200px;
+    border: black solid 2px ;
+    margin: 20px auto;
+    border-radius: 10px;
+    display: none;
+    background-color: white;
+    box-shadow: 1px 1px 10px black;
+  }
+    .searchingpnr input{
+    width: 90%;
+    font-size: 30px;
+    justify-content: center;
+    border: hidden;
+    margin: 10px 10px;
+    margin-top: 30px;
+    margin-left: 30px;
+    overflow: hidden;
+  }
+    .searchingpnr button {
+    width: 98%;
+    color: white;
+    font-size: 30px;
+    background-color: #1434A4;
+    align-items:center;
+    margin-top: 50px;
+    margin-left: 4px;
+    border-radius: 10px;
+  }
+    .searchingpnr hr{
+    width: 90%;
+    margin-left: 20px;
+    font-weight: 900px;
+  }
+  .LiveSpot{
+    color: black;
+    margin: 4%;
+    border-radius: 2px;
+    height: 105px;
+    filter: drop-shadow(1px 1px 5px black);
+  }
+   .LiveSpot h2{
+    color: orange;
+    }
+  .LiveSpot input{
+    border: hidden;
+    font-size: 30px;
+    width: 97%;
+    border: hidden;
+    }
+    .LiveSpot button{
+      color: white;
+      font-size: 23px;
+      align-items: center;
+      background-color: #1434A4;
+      width: 97%;
+      display: block;
+      margin: 10px auto;
+      border-radius: 15px;
+    }
+ .plds1{
+   display: flex;
+   justify-content: center;
+ }
+    .list0{
+      width: 100%;
+      border: solid black 2px;
+      background-color: lightpink;
+      height: 37pc;
+    display: none;
+    }
+     .list1{
+      width: 100%;
+      border: solid black 2px;
+      background-color: lightpink;
+      height: 37pc;
+      display: none;
+     }
+    
+     .l0001{
+       width: 90%;
+       height: 80px;
+       background-color: yellowgreen;
+       border: solid black 2px;
+       display: block;
+       margin: 10px auto;
+       justify-content: center;
+     }
+      .list2 {
+        width: 100%;
+        border: solid black 2px;
+        background-color: lightpink;
+        height: 37pc;
+        display: none;
+      }
+   .footer{
+     align-items: center;
+     display: flex;
+     margin: auto;
+     height: 20px;
+     filter: drop-shadow(1px 1px 10px Black);
+     justify-content: center;
+   }
+</style>
+<body onload="timezone()"  style="background-color: lightgray">
+<div class="Upper">
+  <div class="headess">
+    <h2  class="heads">🚍 Online Bus Services </h2>
+  <div onclick="loginrs()" class="heades" >
+    💳
+  </div>
+  </div>
+  <h1 onclick="timezone()" style=" height: 0px; color: white" class="plds1" ></h1>
+  
+  <div class="Topics">
+  <h2 onclick="PNR()" class="spot" id="spot"> SPOT </h2>
+  <h2 onclick="spot()" id="spots">PNR</h2>
+  </div>
+</div>
+  
+      <div id="login" class="login">
+        <h2 style="filter: drop-shadow(1px 0px 2px black)">Register/Login</h2>
+        <input class="l2897" type="text"placeholder="Email /RS NUMBER">
+        <hr class="hr2467">
+        <input class="l2897" type="password" placeholder="Password">
+        <hr class="hr2467">
+        <button class="l28971" type="submit">SUBMIT</button>
+      </div>
+ 
+  
+      <div class="list0">
+      
+        <div class="l0001">
+         
+       </div>
+       <div class="l0001">
+       
+       </div>
+        <div class="l0001">
+       
+        </div>
+        <div class="l0001">
+       
+        </div>
+         <div class="l0001">
+        
+         </div>
+         <div class="l0001">
+        
+         </div>
+        
+      </div>
+     
+     
+     
+     
+     
+     
+     
+     
+      <div id="list01" class="list1">
+      
+        
+      
+      <div class="l0001">
+         
+       </div>
+       <div class="l0001">
+       
+       </div>
+        <div class="l0001">
+       
+        </div>
+        <div class="l0001">
+       
+        </div>
+         <div class="l0001">
+        
+         </div>
+         <div class="l0001">
+        
+         </div>
+        
+        
+      </div>
+   
+   
+   
+   
+   
+   
+   
+      <div class="list2">
+       
+        <div class="l0001">
+         
+       </div>
+       <div class="l0001">
+       
+       </div>
+        <div class="l0001">
+       
+        </div>
+        <div class="l0001">
+       
+        </div>
+         <div class="l0001">
+        
+         </div>
+         <div class="l0001">
+        
+         </div>
+        
+      </div>
+      
+  
+  
+  <div id="searching" class="searching">
+  <div class="se01">
+    
+   ⬇️<input type="text" placeholder="STARTING PLACE">
+   </div>
+   <hr><br>
+   <div class="se01">
+     ⭕ <input type="text" placeholder="ENDING PLACE"><hr>
+    </div>
+  
+    <button type="submit" id="live0">SEARCH</button>
+  </div>
+    
+
+    
+   <div id="searchingpnr" class="searchingpnr">
+  <div class="pnr01">
+    
+   <input type="text" placeholder="Enter PNR Number">
+   </div>
+   <hr>
+    <button type="submit" id="live0">SEARCH</button>
+  </div>
+    
+    
+    
+    
+    
+  <div id="LiveSpot" class="LiveSpot">
+      <h2> Live Bus Spot</h2>
+     <input onclick="options()" type="text" id ="290432" placeholder="NUMBER/NAME"><hr>
+    <button onclick="opt()" type="submit" class="live1">Search</button>
+    </div>
+
+    
+  <div id="LiveSpot" class="LiveSpot">
+  <h2> Live Bus Stop</h2>
+  <input type="text" id="290432" placeholder="NUMBER/NAME"><hr>
+  <button  type="submit" class="live2">Search</button>
+  </div>
+
+  <footer class="footer">
+    <h4>Devloped by Ankit Kadere</h4>
+  </footer>
+</body>
+
+
+
+
+
+
+
+
+
+<script>
+function PNR(){
+  {
+  var a= document.getElementById('spot'). style.color='yellow';
+  var a= document.getElementById('spots'). style.color='white';
+  var a =document.getElementById('searching').style.display='block';
+  var a =document.getElementsByClassName('LiveSpot')[0].style.display='block';
+  var a =document.getElementsByClassName('LiveSpot')[1].style.display='block';
+  var a =document.getElementsByClassName('login')[0].style.display='none';
+  var a =document.getElementsByClassName('searchingpnr')[0].style.display='none';
+   }
+}
+
+
+function spot(){
+  var a= document.getElementById('spots'). style.color='yellow';
+  var a= document.getElementById('spot'). style.color='white';
+  var a =document.getElementsByClassName('searchingpnr')[0].style.display='block';
+  var a =document.getElementById('searching').style.display='none';
+  var a =document.getElementsByClassName('LiveSpot')[0].style.display='none';
+  var a =document.getElementsByClassName('LiveSpot')[1].style.display='none';
+  var a =document.getElementsByClassName('login')[0].style.display='none';
+}
+
+
+
+
+
+
+  function loginrs(){
+    var a= document.getElementById('spot'). style.color='white';
+    var a= document.getElementById('spots'). style.color='white';
+    var a =document.getElementsByClassName('login')[0].style.display='block';
+  var a =document.getElementById('searching').style.display='none';
+  var a =document.getElementsByClassName('LiveSpot')[0].style.display='none';
+  var a =document.getElementsByClassName('LiveSpot')[1].style.display='none';
+    var a =document.getElementsByClassName('searchingpnr')[0].style.display='none';
+  }
+  
+  
+  
+  
+ 
+  
+  
+  
+  
+  function timezone(){
+    var tm = new Date();
+    var h= tm.getHours();
+    var m= tm.getMinutes();
+    var s= tm.getSeconds();
+    var time= h+' : '+m+' : '+s+' ';
+    document.getElementsByTagName('h1')[0].innerText= time;
+    setTimeout(timezone,1000);
+  }
+  
+  
+ 
+</script>
+</html>
